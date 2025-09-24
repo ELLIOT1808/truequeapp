@@ -1,21 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './components/header.jsx'
-import Hero from './components/Hero.jsx'
-import WhyChoose from './components/WhyChoose.jsx'
-import HowItWorks from './components/HowItWorks.jsx'
-import PopularCategories from './components/PopularCategories.jsx'
-import CommunityImpact from './components/CommunityImpact.jsx'
-import Footer from './components/Footer.jsx'
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header.jsx';
+import Hero from './components/Hero.jsx';
+import WhyChoose from './components/WhyChoose.jsx';
+import HowItWorks from './components/HowItWorks.jsx';
+import PopularCategories from './components/PopularCategories.jsx';
+import CommunityImpact from './components/CommunityImpact.jsx';
+import Footer from './components/Footer.jsx';
+import Login from './components/Login.jsx';
+import Register from './components/Register.jsx';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function Home() {
   return (
     <>
-      <Header />
       <Hero />
       <WhyChoose />
       <HowItWorks />
@@ -23,7 +19,20 @@ function App() {
       <CommunityImpact />
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+function App() {
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </>
+  );
+}
+
+export default App;
