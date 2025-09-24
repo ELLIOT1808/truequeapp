@@ -8,6 +8,10 @@ export default function Register() {
             <p className="text-sm text-center text-gray-500 mb-6">Únete a nuestra comunidad</p>
             <form>
                 <input type="text" placeholder="Nombre completo" className="w-full mb-4 px-4 py-2 border rounded" />
+                Fecha de Nacimiento:
+                <input type="date" placeholder="Fecha de Nacimiento" className="w-full mb-4 px-4 py-2 border rounded" />
+                <input type="text" placeholder="Provincia" className="w-full mb-4 px-4 py-2 border rounded" />
+                <input type="text" placeholder="Nombre de Usuario" className="w-full mb-4 px-4 py-2 border rounded" />
                 <input type="email" placeholder="Correo electrónico" className="w-full mb-4 px-4 py-2 border rounded" />
                 <input type="password" placeholder="Contraseña" className="w-full mb-4 px-4 py-2 border rounded" />
                 <input type="password" placeholder="Confirmar contraseña" className="w-full mb-4 px-4 py-2 border rounded" />
